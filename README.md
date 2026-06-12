@@ -84,11 +84,13 @@ Radar-Comercial-IA-B2B/
 ├── scripts/
 │   └── scoring_prospectos.py
 │
-├── procesados_dash/
-│   ├── prospectos_scoring.csv
+├── procesados/
+│   └── prospectos_scoring.csv
+|
+├── dashboard/
 │   ├── dashboard.pbix
-│   └── dashboard.png
-│
+|   └── prospectos.jpg
+|
 ├── agente_IA/
 │   └── prompt_maestro.md
 │
@@ -117,7 +119,7 @@ El dashboard permite visualizar indicadores clave para Dirección Comercial:
 - Alertas comerciales.
 
 <p align="center">
-  <img src="procesados/dashboard/prospectos.jpg" width="900"/>
+  <img src="prospectos/dashboard/prospectos.jpg" width="900"/>
 </p>
 
 ---
