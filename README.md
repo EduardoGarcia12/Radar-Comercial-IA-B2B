@@ -50,7 +50,7 @@ El agente es capaz de:
 # 🏗️ Arquitectura de la solución
 
 <p align="center">
-  <img src="prospectos/arquitectura/arquitectura.jpg" width="900"/>
+  <img src="prospectos/arquitectura/arquitecura.jpg" width="900"/>
 </p>
 
 La arquitectura sigue el siguiente flujo:
