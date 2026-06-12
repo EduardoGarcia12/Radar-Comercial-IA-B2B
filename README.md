@@ -117,7 +117,7 @@ El dashboard permite visualizar indicadores clave para Dirección Comercial:
 - Alertas comerciales.
 
 <p align="center">
-  <img src="procesados_dash/dashboard.png" width="900"/>
+  <img src="procesados/dashboard/prospectos.jpg" width="900"/>
 </p>
 
 ---
