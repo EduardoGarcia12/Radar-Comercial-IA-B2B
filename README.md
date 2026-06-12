@@ -1,111 +1,194 @@
-# Radar-Comercial-IA-B2B | Analisis de datos, Agente IA
+# 🚀 Radar Comercial IA B2B  
+### Sistema inteligente de priorización de prospectos mediante Data Analytics e IA Generativa
 
-## Problema
+## 📌 Descripción del proyecto
 
-Muchas empresas pierden oportunidades comerciales por falta de seguimiento, ausencia de criterios de priorización y procesos manuales de gestión de prospectos.
+Las empresas suelen perder oportunidades comerciales debido a la falta de seguimiento, ausencia de criterios de priorización y procesos manuales en la gestión de prospectos.
 
-## 📌 Objetivo del proyecto
+Este proyecto propone una solución basada en análisis de datos e Inteligencia Artificial Generativa para ordenar el pipeline comercial, asignar prioridades y recomendar acciones comerciales.
 
-Desarrollar un agente IA con ayuda de Gemini Gems para poder priorizar a los clientes en función de sus necesidades, para ellos se implementera un analisis de datos con ayuda de Python, Excel, Power BI y Gemini Gems para poder dar seguimiento al proceso e ir descartando clientes. 
+El sistema integra un proceso ETL con Python, análisis de datos con Pandas, visualización ejecutiva mediante Power BI y un agente de IA desarrollado con Gemini Gems.
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+# 🎯 Objetivo
+
+Diseñar un agente comercial de IA capaz de analizar prospectos B2B mediante reglas de negocio previamente definidas.
+
+El agente es capaz de:
+
+- Evaluar información del prospecto.
+- Detectar datos faltantes.
+- Calcular un scoring comercial de 0 a 100.
+- Clasificar oportunidades en categorías A, B, C y D.
+- Identificar riesgos de enfriamiento.
+- Detectar objeciones comerciales.
+- Recomendar la siguiente acción comercial.
+- Generar mensajes profesionales de seguimiento.
+- Crear un resumen ejecutivo para Dirección.
+
+> **Nota:** El agente no toma decisiones comerciales finales. Todas sus recomendaciones requieren validación humana.
+
+---
+
+# 🛠️ Tecnologías utilizadas
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=python,powerbi" />
+  <img src="https://skillicons.dev/icons?i=python" />
 </p>
 
 - Python
-- Power BI
-- Excel 
 - Pandas
+- Excel / CSV
+- Power BI
 - Gemini Gems
+- Prompt Engineering
+- ETL (Extract, Transform, Load)
+
 ---
 
-## 🧱 Arquitectura del proyecto
+# 🏗️ Arquitectura de la solución
 
 <p align="center">
-  <img src="arqui_nopa/pilares_nopalera_arquitectura.jpg" width="900"/>
+  <img src="arquitectura/radar_comercial_arquitectura.png" width="900"/>
+</p>
+
+La arquitectura sigue el siguiente flujo:
+
+```
+Base de prospectos (Excel/CSV)
+              ↓
+      ETL con Python y Pandas
+              ↓
+        Dataset procesado
+              ↓
+      ┌─────────────────┐
+      ↓                 ↓
+ Radar Comercial IA   Dashboard Power BI
+      ↓
+Validación humana
+      ↓
+Acción comercial
+```
+
+---
+
+# 📂 Estructura del proyecto
+
+```
+Radar-Comercial-IA-B2B/
+│
+├── base_datos/
+│   └── prospectos.csv
+│
+├── scripts/
+│   └── scoring_prospectos.py
+│
+├── procesados_dash/
+│   ├── prospectos_scoring.csv
+│   ├── dashboard.pbix
+│   └── dashboard.png
+│
+├── agente_IA/
+│   └── prompt_maestro.md
+│
+├── documentacion/
+│   ├── documento_ejecutivo.pdf
+│   └── desarrollo_completo.pdf
+│
+├── presentacion/
+│   ├── Radar_Comercial_IA_B2B.pptx
+│   └── Radar_Comercial_IA_B2B.pdf
+│
+└── README.md
+```
+
+---
+
+# 📊 Dashboard ejecutivo
+
+El dashboard permite visualizar indicadores clave para Dirección Comercial:
+
+- Número de prospectos por categoría A, B, C y D.
+- Monto potencial por prioridad.
+- Prospectos con riesgo de enfriamiento.
+- Oportunidades sin seguimiento reciente.
+- Distribución de oportunidades por responsable.
+- Alertas comerciales.
+
+<p align="center">
+  <img src="procesados_dash/dashboard.png" width="900"/>
 </p>
 
 ---
 
-## 🎥 Videos del proyecto
+# ⚙️ Flujo de trabajo
 
-<table>
-<tr>
-
-<td align="center">
-
-## 🎥 Explicación en Español
-
-<a href="https://www.youtube.com/watch?v=wUgCyCNnwUU&t">
-  <img src="https://img.youtube.com/vi/wUgCyCNnwUU&t/maxresdefault.jpg" width="700"/>
-</a>
-
-### 🇺🇸 English Version
-
-<a href="LINK_VIDEO_ENGLISH">
-  <img src="https://img.youtube.com/vi/jINcV2zDAk0/maxresdefault.jpg" width="400"/>
-</a>
-
-</td>
-
-</tr>
-</table>
+1. El usuario carga la base de prospectos en formato Excel/CSV.
+2. Python realiza el proceso ETL:
+   - Limpieza de datos.
+   - Estandarización de variables.
+   - Aplicación de reglas comerciales.
+   - Cálculo del scoring.
+3. Se genera una nueva base de datos con clasificación A/B/C/D.
+4. Power BI consume los datos procesados y genera indicadores ejecutivos.
+5. El usuario envía un prospecto al agente Radar Comercial IA.
+6. Gemini Gems analiza el caso y propone recomendaciones comerciales.
+7. Un responsable humano valida la recomendación antes de actuar.
 
 ---
 
-## 📊 Dashboard y visualizaciones
+# 🧪 Pruebas realizadas
 
-### Dashboard en Power BI
+El agente fue evaluado utilizando cinco escenarios comerciales:
 
-<p align="center">
-  <img src="dashboard/PILARES_2020_A_2022.png" width="900"/>
-</a>
-</p>
+- Prospecto categoría A (alta prioridad).
+- Prospecto categoría B (seguimiento activo).
+- Prospecto categoría C (nutrición comercial).
+- Prospecto categoría D (posible descarte).
+- Prospecto con información incompleta.
 
-<p align="center">
-  <img src="dashboard/PILARES_2025.png" width="900"/>
-</a>
-</p>
+Los resultados demostraron que el agente puede aplicar las reglas comerciales definidas, detectar información faltante y proponer acciones concretas.
 
 ---
 
-## ⚙️ Flujo de trabajo del pipeline
+# 📈 Resultados obtenidos
 
-1. Archivo Excel
-2. Limpieza, validación y transformación de datos utilizando Python y Pandas, aqui asiganmos el puntaje y clasificacion. 
-3. El proceso ETL nos genera un archivo Excel limpio de mis datos. 
-4. Visualización y análisis de los datos con Tableau.
-5. Pasamos un cliente a Radar Comercial IA B2B y obtenemos el analisis respectivo. 
----
-
-## 📈 Resultados obtenidos
-
-- Segun nuestro agente y prototipo funcionan a la perfeccion con cinco prospectos. 
-- El archivo Excel que obtenemos con Python se acopla muy bien con el agente despues de hacer nuestro diagnostico comercial, puntaje y puntación.  
-- Despues de insertar un prospecto con datos erroneos aproposito, vimos que el Radar lo dectecta muy bien. 
-- Construcción de un pipeline ETL con ayuda de Python. 
+- Automatización del scoring comercial mediante Python.
+- Clasificación automática de prospectos utilizando criterios de negocio.
+- Creación de un dashboard ejecutivo para toma de decisiones.
+- Desarrollo de un prototipo funcional de agente comercial utilizando Gemini Gems.
+- Generación automática de mensajes comerciales adaptados a cada escenario.
+- Incorporación de validación humana como mecanismo de control.
 
 ---
 
-## 🧠 Qué aprendí
+# 🧠 Aprendizajes del proyecto
 
-- Arquitectura basica para analizar datos. 
-- Procesos ETL utilizando Python.
-- Manejo de Power BI para organizar la información. 
-- Diseño de dashboards para la toma de decisiones.
-- Implementar Gemini Gems para crear un protoipo que ayude a empresas medianas y grandes.  
+Durante este desarrollo se aplicaron conocimientos relacionados con:
+
+- Procesos ETL utilizando Python y Pandas.
+- Limpieza y transformación de datos comerciales.
+- Diseño de dashboards ejecutivos con Power BI.
+- Construcción de agentes de IA mediante Prompt Engineering.
+- Integración entre datos, reglas de negocio e Inteligencia Artificial Generativa.
+- Diseño de soluciones de análisis de datos orientadas al negocio.
+
+---
+
+# 🚀 Futuras mejoras
+
+Las siguientes etapas permitirían evolucionar el sistema hacia una solución empresarial más robusta:
+
+- Integración con CRM (HubSpot, Salesforce, Zoho, etc.).
+- Automatización de procesos mediante n8n o Zapier.
+- Conexión con APIs de modelos de IA.
+- Orquestación del pipeline mediante Apache Airflow.
+- Almacenamiento de información en bases de datos relacionales como PostgreSQL.
+- Incorporación de métricas históricas de conversión y desempeño comercial.
 
 ---
 
-## 🚀 Futuras mejoras
+# 👤 Autor
 
-- Integración con CRM.
-- Automatización con n8n.
-- Integración mediante APIs.
-- Integración de Airflow para orquestar el proceso de analisis de datos. 
-
----
+Proyecto desarrollado por **[Tu nombre]** como caso de estudio de Data Analytics, Business Intelligence e Inteligencia Artificial aplicada a procesos comerciales B2B.
