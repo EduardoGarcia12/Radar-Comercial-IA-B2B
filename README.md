@@ -191,4 +191,4 @@ Las siguientes etapas permitirían evolucionar el sistema hacia una solución em
 
 # 👤 Autor
 
-Proyecto desarrollado por **[Tu nombre]** como caso de estudio de Data Analytics, Business Intelligence e Inteligencia Artificial aplicada a procesos comerciales B2B.
+Proyecto desarrollado por **[Eduardo García]** como caso de estudio de Data Analytics, Business Intelligence e Inteligencia Artificial aplicada a procesos comerciales B2B.
